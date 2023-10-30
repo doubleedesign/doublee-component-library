@@ -1,0 +1,133 @@
+.btn {
+	appearance: none;
+	font-size: map-get($fontSizes, 'xs');
+	min-height: 2rem;
+	display: inline-flex;
+	align-items: center;
+	padding: map-get($spacing, 'xs') map-get($spacing, 'lg');
+	border-radius: 0.25rem;
+	line-height: 1;
+	border: 0;
+	font-family: $body-font-family;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	text-decoration: transparent underline;
+	font-weight: map-get($fontWeights, 'semibold');
+
+	@media screen and (min-width: #{map-get($breakpoints, 'md')}px) {
+		min-height: rem(42px);
+		font-size: map-get($fontSizes, 'sm');
+		padding: map-get($spacing, 'sm') map-get($spacing, 'xl');
+	}
+
+	@include hover-focus-active {
+		text-decoration-color: currentColor;
+	}
+
+	&--icon {
+		text-decoration: none;
+
+		span {
+			text-decoration: transparent underline;
+			transition: text-decoration 0.3s ease;
+		}
+
+		i, svg {
+			font-size: map-get($fontSizes, 'xs');
+			margin-left: map-get($spacing, 'sm');
+			transition: all 0.3s ease;
+
+			@media screen and (min-width: #{map-get($breakpoints, 'xl')}px) {
+				font-size: map-get($fontSizes, 'sm');
+			}
+		}
+
+		@include hover-focus-active {
+			span {
+				text-decoration-color: currentColor;
+			}
+
+			.fa-rotate-right {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&--small {
+		font-size: map-get($fontSizes, 'xxs');
+		min-height: unset;
+		padding: map-get($spacing, 'sm') map-get($spacing, 'md');
+	}
+}
+
+// Colour specified on the button
+@each $colour, $value in $colours {
+
+	.btn--#{$colour} {
+		background: $value;
+		color: color-contrast($value);
+		border: 1px solid $value;
+		display: inline-flex;
+		align-items: center;
+		@include sweep-to-right(darken($value, 15%));
+		text-decoration: underline;
+		text-decoration-color: transparent;
+		transition: all 0.3s ease;
+
+		@include hover-focus-active {
+			border-color: darken($value, 15%);
+			text-decoration-color: currentColor;
+		}
+	}
+
+	.btn--#{$colour}--hollow {
+		color: $value;
+		border: 1px solid $value;
+		@include shutter-out-horizontal($value);
+		background: transparent;
+		display: inline-flex;
+		transition: all 0.3s ease;
+
+		@include hover-focus-active {
+			color: color-contrast($value);
+			border-color: $value;
+		}
+
+		&[aria-current="page"] {
+			background: $value;
+			color: color-contrast($value, $color-contrast-dark: map-get($colours, 'dark'), $color-contrast-light: $white);
+		}
+	}
+}
+
+.btn--light-grey {
+	background: map-get($greys, '200');
+	display: inline-flex;
+
+	@include hover-focus-active {
+		color: color-contrast(map-get($greys, '400'));
+	}
+}
+
+// Defaults based on container background colour (using bg-* classes)
+@each $colour, $value in $colours {
+
+	.bg-#{$colour} {
+
+		.btn:not([class*='btn--']) {
+			@if color-contrast($value) == #FFF {
+				@extend .btn--white;
+			} @else {
+				@extend .btn--primary;
+			}
+		}
+
+		.btn--hollow:not([class*='btn--hollow--']) {
+			@if color-contrast($value) == #FFF {
+				@extend .btn--white--hollow;
+			} @else {
+				@extend .btn--primary--hollow;
+			}
+		}
+	}
+}

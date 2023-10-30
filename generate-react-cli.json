@@ -1,0 +1,52 @@
+{
+	"usesTypeScript": true,
+	"usesStyledComponents": false,
+	"usesCssModule": false,
+	"cssPreprocessor": "scss",
+	"testLibrary": "Testing Library",
+	"component": {
+		"wp-php": {
+			"path": "wp-php/src/components",
+			"withStyle": true,
+			"withTest": false,
+			"withStory": true,
+			"withLazy": false,
+			"customTemplates": {
+				"style": "_generator-templates/wp-php/TemplateName.scss",
+				"component": "_generator-templates/wp-php/TemplateName.php",
+				"story": "_generator-templates/wp-php/TemplateName.stories.json"
+			}
+		},
+		"vue": {
+			"path": "vue/src/components",
+			"withStyle": false,
+			"withTest": true,
+			"withStory": true,
+			"withLazy": false,
+			"customTemplates": {
+				"component": "_generator-templates/vue/TemplateName.vue",
+				"story": "_generator-templates/vue/TemplateName.test.tsx"
+			}
+		},
+		"react": {
+			"path": "react/src/components",
+			"withStyle": true,
+			"withTest": true,
+			"withStory": true,
+			"withLazy": false,
+			"customTemplates": {
+				"style": "_generator-templates/react/TemplateName.styled.ts",
+				"component": "_generator-templates/react/TemplateName.tsx",
+				"story": "_generator-templates/react/TemplateName.stories.tsx",
+				"test": "_generator-templates/react/TemplateName.test.tsx"
+			}
+		},
+		"default": {
+			"path": "src/components",
+			"withStyle": false,
+			"withTest": false,
+			"withStory": false,
+			"withLazy": false
+		}
+	}
+}

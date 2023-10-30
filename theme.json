@@ -1,0 +1,89 @@
+{
+	"greys": {
+		"100": "#F8F9FA",
+		"200": "#E9ECEF",
+		"300": "#DEE2E6",
+		"400": "#CED4DA",
+		"500": "#ADB5BD",
+		"600": "#6C757D",
+		"700": "#495057",
+		"800": "#343A40",
+		"900": "#212529"
+	},
+	"colours": {
+		"primary": "#804097",
+		"secondary": "#00C9B9",
+		"accent": "#C5488D",
+		"success": "#00C9B9",
+		"info": "#00a7c9",
+		"warning": "#FF8D00",
+		"alert": "#a63469",
+		"light": "#EDECF3",
+		"dark": "#56176D",
+		"white": "#FFF",
+		"black": "#000"
+	},
+	"min-contrast-ratio": "3",
+	"white": "#FFF",
+	"black": "#000",
+	"color-contrast-dark": "$black",
+	"color-contrast-light": "$white",
+	"fontSizes": {
+		"xs": "0.833rem",
+		"sm": "1rem",
+		"md": "1.2rem",
+		"lg": "1.44rem",
+		"xl": "1.728rem",
+		"xxl": "2.074rem"
+	},
+	"fontWeights": {
+		"light": 300,
+		"normal": 400,
+		"semibold": 600,
+		"bold": 700
+	},
+	"font-family-sans-serif": "'Inter Tight', 'Segoe UI', 'Helvetica Neue', 'Noto Sans', 'Liberation Sans', 'arial', 'sans-serif'",
+	"font-family-serif": "'Georgia', 'Times New Roman', serif",
+	"font-family-monospace": "'sfmono-regular', menlo, monaco, consolas, Liberation Mono, monospace",
+	"body-font-family": "$font-family-sans-serif",
+	"heading-font-family": "$font-family-sans-serif",
+	"gutters": {
+		"xs": "0.5rem",
+		"sm": "0.5rem",
+		"md": "1rem",
+		"lg": "1rem",
+		"xl": "1.5rem",
+		"xxl": "1.5rem"
+	},
+	"spacing": {
+		"xs": "0.25rem",
+		"sm": "0.5rem",
+		"md": "0.75rem",
+		"lg": "1rem",
+		"xl": "1.5rem",
+		"xxl": "2rem"
+	},
+	"breakpoints": {
+		"xs": "300",
+		"sm": "620",
+		"md": "768",
+		"lg": "992",
+		"xl": "1200",
+		"xxl": "1400"
+	},
+	"container-max-widths": {
+		"xs": "576px",
+		"sm": "576px",
+		"md": "720px",
+		"lg": "960px",
+		"xl": "1140px",
+		"xxl": "1280px"
+	},
+	"gridColumns": 12,
+	"aspectRatios": {
+		"1x1": "100%",
+		"4x3": "calc(3 / 4 * 100%)",
+		"16x9": "calc(9 / 16 * 100%)",
+		"21x9": "calc(9 / 21 * 100%)"
+	}
+}

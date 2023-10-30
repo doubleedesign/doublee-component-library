@@ -1,0 +1,26 @@
+//@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,600;0,800;1,300&display=swap');
+@import 'reset';
+@import 'variables';
+//@import '../node_modules/@doubleedesign/hover.scss/hover';
+@import 'functions';
+@import 'mixins';
+@import 'typography';
+@import 'common';
+@import 'buttons';
+
+:root {
+	font-family: $body-font-family;
+	line-height: 1.5;
+	font-weight: 300;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	width: 100vw;
+	min-height: 100vh;
+}

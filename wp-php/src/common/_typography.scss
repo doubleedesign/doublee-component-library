@@ -1,0 +1,129 @@
+.entry-content {
+	container-type: inline-size;
+	line-height: 1.45;
+	color: map-get($greys, '900'); // see _common.scss for colours based on background colour
+
+	h1,
+	h2,
+	h3 {
+		font-weight: map-get($fontWeights, 'bold');
+	}
+
+	h1 {
+		font-size: map-get($fontSizes, 'lg');
+		margin-bottom: map-get($spacing, 'sm');
+
+		@container (min-width: #{map-get($breakpoints, 'md')}px) {
+			font-size: map-get($fontSizes, 'xl');
+		}
+
+		@container (min-width: #{map-get($breakpoints, 'lg')}px) {
+			font-size: map-get($fontSizes, 'xxl');
+		}
+	}
+
+	h2 {
+		font-size: map-get($fontSizes, 'md');
+		margin-bottom: map-get($spacing, 'sm');
+
+		@container (min-width: #{map-get($breakpoints, 'md')}px) {
+			font-size: map-get($fontSizes, 'lg');
+			margin-bottom: map-get($spacing, 'lg');
+		}
+	}
+
+	h3 {
+		font-size: map-get($fontSizes, 'sm');
+		margin-bottom: map-get($spacing, 'sm');
+
+		@container (min-width: #{map-get($breakpoints, 'md')}px) {
+			font-size: map-get($fontSizes, 'md');
+		}
+	}
+
+	p, ul, ol, blockquote {
+		font-size: map-get($fontSizes, 'xs');
+		margin-top: map-get($spacing, 'md');
+		margin-bottom: map-get($spacing, 'md');
+
+		@container (min-width: #{map-get($breakpoints, 'md')}px) {
+			font-size: map-get($fontSizes, 'sm');
+			margin-bottom: map-get($spacing, 'lg');
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	p.lead {
+		font-size: map-get($fontSizes, 'md');
+		font-weight: map-get($fontWeights, 'bold');
+	}
+
+	ul, ol {
+		margin-left: 1em;
+
+		li {
+			margin-bottom: map-get($spacing, 'xs');
+		}
+	}
+
+	ul {
+		list-style: disc outside;
+	}
+
+	ol {
+		list-style: decimal outside;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	a:not(.btn):not(.email-address) {
+		@include underline-from-center(map-get($colours, 'accent'));
+		text-decoration-color: rgba(map-get($greys, '900'), 0.2);
+
+		&:before {
+			height: 1px;
+			bottom: 2px;
+		}
+
+		@include hover-focus-active {
+			color: map-get($colours, 'accent');
+		}
+	}
+
+	.email-address {
+		text-decoration: none;
+	}
+
+	.wp-caption {
+	width: 100%;
+	max-width: 100%;
+
+	img {
+		height: auto;
+	}
+
+	.wp-caption-text {
+		text-align: center;
+		font-size: map-get($fontSizes, 'xs');
+		font-style: italic;
+		padding-top: map-get($spacing, 'xs');
+		padding-bottom: map-get($spacing, 'xs');
+		border-bottom: 1px solid map-get($greys, '300');
+		margin-bottom: map-get($spacing, 'lg');
+	}
+}
+
+	blockquote {
+		font-family: $heading-font-family;
+		padding: map-get($spacing, 'sm');
+
+		@container (min-width: #{map-get($breakpoints, 'lg')}px) {
+			padding: map-get($spacing, 'lg');
+		}
+	}
+}

@@ -1,0 +1,5 @@
+
+Xphp:S105"EReplace all tab characters in this file by sequences of white-spaces.8ëâÅ´1
+e	php:S1808"DPut one space between this "if" keyword and the opening parenthesis.(È±“åüÿÿÿÿ8ìâÅ´1
+k	php:S1779"WReplace all non line feed end of line characters in this file "TemplateName.php" by LF.8¢ú¿Â´1
+l	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(©Æ¬28ïâÅ´1

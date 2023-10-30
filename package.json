@@ -1,0 +1,22 @@
+{
+	"name": "doublee-component-library",
+	"type": "module",
+	"author": "Leesa Ward",
+	"version": "0.0.1",
+	"description": "Experimental cross-stack front-end component library",
+	"workspaces": [
+		"react",
+		"vue",
+		"wp-php"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"generate": "node index.js",
+		"dev:php": "bash ./wp-php/start.sh",
+		"storybook:php": "npm run storybook -w wp-php"
+	},
+	"dependencies": {
+		"generate-react-cli": "^8.3.0",
+		"inquirer": "^9.2.11"
+	}
+}
