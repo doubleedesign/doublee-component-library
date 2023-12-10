@@ -13,11 +13,20 @@
 		},
 		"color": {
 			"control": "select",
-			"options": ["primary", "secondary", "accent"]
+			"options": ["primary", "primary--hollow", "secondary", "secondary--hollow", "accent", "accent--hollow"]
 		},
 		"size": {
 			"control": "select",
 			"options": ["small", "default", "large"]
+		},
+		"variant": {
+			"control": "select",
+			"options": ["default", "icon-left", "icon-right"]
+		},
+		"icon": {
+			"control": "select",
+			"options": ["fa-arrow-right", "fa-arrow-left", "fa-magnifying-glass", "fa-rotate-right", "fa-envelope"],
+			"if": { "arg": "variant", "neq": "default" }
 		}
 	},
 	"stories": [
@@ -26,7 +35,9 @@
 			"args": {
 				"label": "Button demo",
 				"color": "primary",
-				"size": "default"
+				"size": "default",
+				"variant": "default",
+				"icon": "fa-arrow-right"
 			}
 		}
 	]

@@ -13,6 +13,10 @@ function get_field($field_name) {
                 'title' => $_REQUEST['label'],
                 'target' => ''
             );
+        case 'variant':
+            return $_REQUEST['variant'] ?? 'default';
+        case 'icon':
+            return $_REQUEST['icon'] ?? '';
         default:
             return '';
     }

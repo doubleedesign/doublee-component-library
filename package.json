@@ -10,7 +10,6 @@
 		"wp-php"
 	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"generate": "node index.js",
 		"dev:php": "bash ./wp-php/start.sh",
 		"storybook:php": "npm run storybook -w wp-php"

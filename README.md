@@ -18,7 +18,7 @@ The server script expects the PHP executable to be located at `C:/php/php.exe`. 
 
 #### Using with WordPress
 
-**TODO**: Add instructions, incl. how to do admin and editor CSS.
+**TODO**: Add instructions, incl. how to do admin and editor CSS, ACF fields etc.
 
 ### React
 A set of React components. **TODO**: Info.
